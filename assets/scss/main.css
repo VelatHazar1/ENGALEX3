@@ -456,14 +456,11 @@ main .price .container .regular {
   flex-direction: column;
   width: 20rem;
   height: 10rem;
-  padding-bottom: 1rem;
+  gap: 1rem;
   background-image: url("../images/price2.jpg");
   background-size: cover;
   border-radius: 1rem;
   transition: 0.5s;
-}
-main .price .container .regular h1 {
-  padding-bottom: 1rem;
 }
 main .price .container .regular:hover {
   transform: translateY(-0.25em);
@@ -471,6 +468,9 @@ main .price .container .regular:hover {
   transition: 0.5s;
 }
 @media (max-width: 1024px) {
+  main .price .container .regular {
+    gap: 0;
+  }
   main .price .container .regular .button {
     margin-top: 1rem;
     font-size: 1rem;
@@ -482,6 +482,7 @@ main .price .container .regular:hover {
 @media (max-width: 767px) {
   main .price .container .regular {
     width: 70vw;
+    gap: 0;
   }
   main .price .container .regular .button {
     margin-top: 1rem;
@@ -496,16 +497,13 @@ main .price .container .premium {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 1rem;
   width: 20rem;
   height: 10rem;
+  gap: 1rem;
   background-image: url("../images/price2.jpg");
   background-size: cover;
   border-radius: 1rem;
   transition: 0.5s;
-}
-main .price .container .premium h1 {
-  padding-bottom: 1rem;
 }
 main .price .container .premium:hover {
   transform: translateY(-0.25em);
@@ -513,6 +511,9 @@ main .price .container .premium:hover {
   transition: 0.5s;
 }
 @media (max-width: 1024px) {
+  main .price .container .premium {
+    gap: 0;
+  }
   main .price .container .premium .button {
     margin-top: 1rem;
     font-size: 1rem;
@@ -524,6 +525,7 @@ main .price .container .premium:hover {
 @media (max-width: 767px) {
   main .price .container .premium {
     width: 70vw;
+    gap: 0;
   }
   main .price .container .premium .button {
     margin-top: 1rem;
