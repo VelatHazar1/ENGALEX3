@@ -252,7 +252,7 @@ main {
     }
   }
 
-  .services {
+  .lessons {
     background-color: #e5e5e5;
     position: relative;
 
@@ -279,20 +279,19 @@ main {
           display: block;
           border-radius: 1rem;
         }
+        @media (max-width: 1024px) {
+          border-left: none;
+          border-bottom: 10px solid #f77f00;
+          width: fit-content;
+        }
         @media (max-width: 767px) {
           border-left: none;
           border-bottom: 10px solid #f77f00;
           border-radius: 1rem;
         }
       }
-      .services-grid {
-        @media (max-width: 1024px) {
-        }
-
-        @media (max-width: 767px) {
-        }
-
-        .service {
+      .lessons-grid {
+        .lesson {
           padding: 1rem;
 
           border-radius: 16px;
@@ -314,14 +313,19 @@ main {
     }
   }
 
-  .video {
+  .aboutMe {
     display: flex;
     align-items: center;
     justify-content: center;
 
     background-color: #edf6f9;
+
+    @media (max-width: 1200px) {
+      gap: 5rem;
+    }
     @media (max-width: 767px) {
       flex-direction: column-reverse;
+      gap: 0;
     }
 
     .container {
@@ -334,7 +338,7 @@ main {
       margin-left: 6rem;
 
       @media (max-width: 767px) {
-        padding: 0 1.5rem 2rem 1.5rem;
+        padding: 0 1.5rem 1rem 1.5rem;
         margin-left: 0;
         width: 100%;
       }
@@ -347,6 +351,7 @@ main {
       ul li span {
         font-weight: 700;
       }
+
       @media (max-width: 767px) {
         margin-right: 0;
         padding: 4rem;
@@ -354,11 +359,11 @@ main {
     }
   }
 
-  .projects {
+  .classes {
     padding-top: 64px;
     padding-bottom: 64px;
 
-    .projects-grid {
+    .classes-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 16px;
@@ -373,7 +378,7 @@ main {
         grid-template-columns: 1fr;
       }
 
-      .project {
+      .class {
         background-image: url("../images/image\ 2.png");
         background-position: top;
         background-size: cover;
@@ -400,7 +405,7 @@ main {
             margin-bottom: 16px;
 
             @media (max-width: 1024px) {
-              font-size: 28px;
+              font-size: 30px;
             }
           }
           span {
@@ -414,7 +419,7 @@ main {
             margin-left: 2rem;
 
             @media (max-width: 1024px) {
-              font-size: 16px;
+              font-size: 1.2rem;
             }
             @media (max-width: 767px) {
               font-size: 1.2rem;
@@ -470,67 +475,90 @@ main {
         @media (max-width: 767px) {
           flex-direction: column;
         }
+      }
+      .regular {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-        .regular {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
+        width: 20rem;
+        height: 10rem;
+        padding-bottom: 1rem;
 
-          width: 20rem;
-          height: 10rem;
+        background-image: url("../images/price2.jpg");
+        background-size: cover;
+        border-radius: 1rem;
+        transition: 0.5s;
+
+        h1 {
           padding-bottom: 1rem;
-
-          background-image: url("../images/price2.jpg");
-          background-size: cover;
-          border-radius: 1rem;
+        }
+        &:hover {
+          transform: translateY(-0.25em);
+          cursor: pointer;
           transition: 0.5s;
-
-          h1 {
-            padding-bottom: 1rem;
+        }
+        @media (max-width: 1024px) {
+          .button {
+            margin-top: 1rem;
+            font-size: 1rem;
           }
-          &:hover {
-            transform: translateY(-0.25em);
-            cursor: pointer;
-            transition: 0.5s;
-          }
-          @media (max-width: 767px) {
-            p {
-              font-size: 1.2rem;
-            }
-            width: 15rem;
-            height: 8rem;
+          p {
+            font-size: 1.2rem;
           }
         }
-        .premium {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
+        @media (max-width: 767px) {
+          .button {
+            margin-top: 1rem;
+            font-size: 1rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+          width: 70vw;
+        }
+      }
+      .premium {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+        width: 20rem;
+        height: 10rem;
+
+        background-image: url("../images/price2.jpg");
+        background-size: cover;
+        border-radius: 1rem;
+        transition: 0.5s;
+        h1 {
           padding-bottom: 1rem;
-
-          width: 20rem;
-          height: 10rem;
-
-          background-image: url("../images/price2.jpg");
-          background-size: cover;
-          border-radius: 1rem;
+        }
+        &:hover {
+          transform: translateY(-0.25em);
+          cursor: pointer;
           transition: 0.5s;
-          h1 {
-            padding-bottom: 1rem;
+        }
+        @media (max-width: 1024px) {
+          .button {
+            margin-top: 1rem;
+            font-size: 1rem;
           }
-          &:hover {
-            transform: translateY(-0.25em);
-            cursor: pointer;
-            transition: 0.5s;
+          p {
+            font-size: 1.2rem;
           }
-          @media (max-width: 767px) {
-            p {
-              font-size: 1.2rem;
-            }
-            width: 15rem;
-            height: 8rem;
+        }
+        @media (max-width: 767px) {
+          .button {
+            margin-top: 1rem;
+            font-size: 1rem;
           }
+          p {
+            font-size: 1.2rem;
+          }
+          width: 70vw;
         }
       }
     }
@@ -551,19 +579,9 @@ main {
           justify-content: space-between;
           gap: 1rem;
         }
-        .mail {
-          display: inline-block;
-          color: #fff;
-          font-size: 20px;
-          background-color: #f77f00;
-          padding: 12px 16px;
-          border-radius: 8px;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-weight: 700;
-          cursor: pointer;
-          @media (max-width: 767px) {
-            font-size: 1rem;
+        @media (max-width: 767px) {
+          .button {
+            font-size: 15px;
           }
         }
       }
@@ -579,4 +597,7 @@ footer {
   .hide-mob {
     display: none;
   }
+}
+
+@media (max-width: 767px) {
 }
