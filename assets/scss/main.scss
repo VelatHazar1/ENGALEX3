@@ -8,7 +8,7 @@
 
 .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 110rem;
   margin: 0 auto;
   padding-left: 128px;
   padding-right: 128px;
@@ -125,7 +125,7 @@ section {
 
   display: inline-block;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #f77f00;
   padding: 12px 16px;
   border-radius: 8px;
@@ -258,7 +258,7 @@ main {
 
     .container {
       display: flex;
-
+      justify-content: space-around;
       align-items: center;
       flex-direction: row-reverse;
 
@@ -272,7 +272,7 @@ main {
       }
       .img-box {
         display: block;
-        width: 100%;
+        width: max-content;
         border-left: 10px solid #f77f00;
         border-radius: 1rem;
         .img {
@@ -315,12 +315,13 @@ main {
 
   .aboutMe {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     background-color: #edf6f9;
 
     @media (max-width: 1200px) {
+      flex-direction: column-reverse;
       gap: 5rem;
     }
     @media (max-width: 767px) {
@@ -329,14 +330,18 @@ main {
     }
 
     .container {
-      display: flex;
-      justify-content: start;
-      align-items: center;
+      position: relative;
 
-      width: auto;
+      width: max-content;
       padding: 1rem 0;
-      margin-left: 6rem;
 
+      .youtube {
+        width: 45rem;
+        height: 25rem;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
       @media (max-width: 767px) {
         padding: 0 1.5rem 1rem 1.5rem;
         margin-left: 0;
@@ -344,15 +349,21 @@ main {
       }
     }
     .content {
-      margin-right: 10rem;
+      width: 40%;
+      font-size: 1.2rem;
+
       h1 {
         margin-bottom: 1rem;
       }
       ul li span {
         font-weight: 700;
       }
-
+      @media (max-width: 1200px) {
+        padding-top: 2rem;
+        width: 80%;
+      }
       @media (max-width: 767px) {
+        width: 100%;
         margin-right: 0;
         padding: 4rem;
       }
@@ -467,8 +478,9 @@ main {
 
       .price-flex {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        width: 100%;
 
         padding: 1rem;
         gap: 2rem;
@@ -482,21 +494,28 @@ main {
         align-items: center;
         flex-direction: column;
 
-        width: 20rem;
-        height: 10rem;
-        gap: 1rem;
-        // padding-bottom: 1rem;
+        width: 40%;
+        height: 15rem;
+        padding-bottom: 1rem;
 
         background-image: url("../images/price2.jpg");
         background-size: cover;
         border-radius: 1rem;
         transition: 0.5s;
+        font-size: 1.2rem;
 
+        h1 {
+          padding-bottom: 1rem;
+        }
+        p {
+          padding-bottom: 1rem;
+        }
         &:hover {
           transform: translateY(-0.25em);
           cursor: pointer;
           transition: 0.5s;
         }
+
         @media (max-width: 1024px) {
           .button {
             margin-top: 1rem;
@@ -505,7 +524,6 @@ main {
           p {
             font-size: 1.2rem;
           }
-          gap: 0;
         }
         @media (max-width: 767px) {
           .button {
@@ -516,7 +534,6 @@ main {
             font-size: 1.2rem;
           }
           width: 70vw;
-          gap: 0;
         }
       }
       .premium {
@@ -524,17 +541,22 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        // padding-bottom: 1rem;
+        padding-bottom: 1rem;
 
-        width: 20rem;
-        height: 10rem;
-        gap: 1rem;
+        width: 40%;
+        height: 15rem;
 
         background-image: url("../images/price2.jpg");
         background-size: cover;
         border-radius: 1rem;
         transition: 0.5s;
-
+        font-size: 1.2rem;
+        h1 {
+          padding-bottom: 1rem;
+        }
+        p {
+          padding-bottom: 1rem;
+        }
         &:hover {
           transform: translateY(-0.25em);
           cursor: pointer;
@@ -548,7 +570,6 @@ main {
           p {
             font-size: 1.2rem;
           }
-          gap: 0;
         }
         @media (max-width: 767px) {
           .button {
@@ -559,7 +580,6 @@ main {
             font-size: 1.2rem;
           }
           width: 70vw;
-          gap: 0;
         }
       }
     }
@@ -569,8 +589,8 @@ main {
     background-color: #12002f;
 
     .container {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
       .contact-flex {
         display: flex;
         justify-content: space-between;
